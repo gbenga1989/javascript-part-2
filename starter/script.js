@@ -229,14 +229,46 @@ TEST DATA 2: Dolphins scored 85, 54, and 41. Koalas scored 23, 34, and 27.*/
 // BONUS: Create an array totals containing the total values, so the bill + tip.
 
 // TEST DATA: 125, 555, and 44.
-const calcTip = function(bill){
-  return bill >= 50 && bill <=300 ? bill * 0.15: bill * 0.2;
+// const calcTip = function(bill){
+//   return bill >= 50 && bill <=300 ? bill * 0.15: bill * 0.2;
+// }
+
+// // const calcTip = bill => bill >= 50 && <=300 ? bill * 0.15: bill * 0.2;
+
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2] ];
+
+// console.log(bills, tips);
+
+const jonas = {
+  firstName: 'jonas',
+  lastName: 'screwtman',
+  age:2037 - 1991,
+  job: 'teacher',
+  friends: ['michael', 'peter', 'steven']
+};
+console.log(jonas.lastName);
+console.log(jonas['lastName'])
+
+
+const nameKey = 'Name';
+console.log(jonas['first' + nameKey]);
+console.log(jonas['last' + nameKey]);
+
+const interestedIn = prompt('what do you want to know about jonas? choose betweeen firstName, lastName, age, job and friends');
+
+if(jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+}
+else{
+  console.log('wrong requwst! choose betweeen firstName, lastName, age, job and friends')
 }
 
-// const calcTip = bill => bill >= 50 && <=300 ? bill * 0.15: bill * 0.2;
+jonas.location = 'portugal';
+jonas['twitter'] = '@jonalshmat';
+console.log(jonas);
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
-const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2] ];
-
-console.log(bills, tips);
+//challenge
+//'jonas has 3 frieds, and his best friend is called michael'
+console.log(`${jonas.firstName} has ${jonas.friends.length} friends and his best friend is called ${jonas.friends[0]}`);
